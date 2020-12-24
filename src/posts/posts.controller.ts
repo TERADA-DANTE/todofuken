@@ -1,11 +1,13 @@
 import { Controller, Get, Param } from '@nestjs/common';
-
+import { Result } from './enitities/post.entity';
+import { PostsService } from './posts.service';
 @Controller('posts')
 export class PostsController {
+  constructor(private readonly postsService: PostsService) {}
   // Naming convention
   @Get('/:zipcode')
   //getAddressById
-  getAddress(@Param('zipcode') zipcode: number) {
-    return `this will get zipcode : ${zipcode}`;
+  getAddress(@Param('zipcode') zipcode: string): Result {
+    return this.postsService.getAddress(zipcode);
   }
 }

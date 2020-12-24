@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
 import { PostsController } from './posts/posts.controller';
+import { PostsService } from './posts/posts.service';
 
 @Module({
   imports: [],
   // Controllers get url and execute its function which inherits from service.
   controllers: [PostsController],
-  providers: [],
+  providers: [PostsService],
 })
 export class AppModule {}

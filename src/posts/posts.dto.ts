@@ -1,5 +1,5 @@
 // ⚠ Naming convention
-export class Result {
+export class ResultDto {
   id: number;
   zipcode: string;
   prefecture: string;

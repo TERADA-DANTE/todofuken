@@ -18,6 +18,15 @@ export class PostsController {
     return this.prismaService.result.findMany();
   }
 
+  @Get(':zipcode')
+  findOne(@Param('zipcode') zipcode: string): Promise<ResultDto> {
+    return this.prismaService.result.findUnique({
+      where: {
+        zipcode,
+      },
+    });
+  }
+
   // @Post()
   // create(
   //   @Body() { zipcode, prefecture, city, area, code }: ResultDto,

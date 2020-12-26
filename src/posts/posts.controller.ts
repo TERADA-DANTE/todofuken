@@ -18,12 +18,12 @@ export class PostsController {
     return this.prismaService.result.findMany();
   }
 
-  @Post()
-  create(
-    @Body() { zipcode, prefecture, city, area, code }: ResultDto,
-  ): Promise<ResultDto> {
-    return this.prismaService.result.create({
-      data: { zipcode, prefecture, city, area, code },
-    });
-  }
+  // @Post()
+  // create(
+  //   @Body() { zipcode, prefecture, city, area, code }: ResultDto,
+  // ): Promise<ResultDto> {
+  //   return this.prismaService.result.create({
+  //     data: { zipcode, prefecture, city, area, code },
+  //   });
+  // }
 }

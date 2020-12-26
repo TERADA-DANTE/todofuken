@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 
-import { Result } from './enitities/post.entity';
+import { Result } from './enitities/result.entity';
 @Injectable()
 export class PostsService {
   private results: Result[] = [];

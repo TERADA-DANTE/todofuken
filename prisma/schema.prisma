@@ -11,8 +11,8 @@ generator client {
 }
 
 model Result{
-  id          Int @default(autoincrement()) @id
-  zipcode     String
+  id          Int @id
+  zipcode     String @unique
   prefecture  String
   city        String
   area        String

@@ -9,3 +9,12 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
+
+model Result{
+  id          Int @default(autoincrement()) @id
+  zipcode     String
+  prefecture  String
+  city        String
+  area        String
+  code        Int
+}

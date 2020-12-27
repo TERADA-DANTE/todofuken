@@ -3,11 +3,11 @@ import { PostsController } from './posts/posts.controller';
 import { PostsService } from './posts/posts.service';
 import { PrismaModule } from './prisma/prisma.module';
 import { PostsModule } from './posts/posts.module';
+import { AppController } from './app.controller';
 
 @Module({
   imports: [PrismaModule, PostsModule],
-  // Controllers get url and execute its function which inherits from service.
-  controllers: [PostsController],
-  providers: [PostsService],
+  controllers: [AppController],
+  providers: [],
 })
 export class AppModule {}

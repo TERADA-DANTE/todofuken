@@ -1,9 +1,9 @@
 // ⚠ Naming convention
 export class ResultDto {
   id: number;
-  zipcode: string;
-  prefecture: string;
-  city: string;
-  area: string;
-  code: number;
+  readonly zipcode: string;
+  readonly prefecture: string;
+  readonly city: string;
+  readonly area: string;
+  readonly code: number;
 }

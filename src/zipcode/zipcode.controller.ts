@@ -7,12 +7,12 @@ export class ZipcodeController {
   constructor(private readonly prismaService: PrismaService) {}
 
   @Get()
-  findAll(): Promise<ResultDto[]> {
+  findMany(): Promise<ResultDto[]> {
     return this.prismaService.result.findMany();
   }
 
   @Get('/:zipcode')
-  findOne(@Param('zipcode') zipcode: string) {
+  findUnique(@Param('zipcode') zipcode: string) {
     return this.prismaService.result.findUnique({
       where: {
         zipcode,

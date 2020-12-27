@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
-import { ResultDto } from './posts.dto';
+import { ResultDto } from './dto/posts.dto';
 
 @Controller('posts')
 export class PostsController {

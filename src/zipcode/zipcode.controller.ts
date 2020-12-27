@@ -7,12 +7,13 @@ export class ZipcodeController {
   constructor(private readonly prismaService: PrismaService) {}
 
   @Get()
-  findMany(): Promise<ResultDto[]> {
-    return this.prismaService.result.findMany();
+  findMany(): string {
+    return 'This endpoint is not supported for performance reason.\n Try /$zipcode';
+    //return this.prismaService.result.findMany();
   }
 
   @Get('/:zipcode')
-  findUnique(@Param('zipcode') zipcode: string) {
+  findUnique(@Param('zipcode') zipcode: string): Promise<ResultDto> {
     return this.prismaService.result.findUnique({
       where: {
         zipcode,

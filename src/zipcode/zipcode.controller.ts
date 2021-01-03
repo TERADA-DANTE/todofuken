@@ -13,7 +13,7 @@ export class ZipcodeController {
   }
 
   @Get('/:zipcode')
-  findUnique(@Param('zipcode') zipcode: string): Promise<ResultDto> {
+  findFirst(@Param('zipcode') zipcode: string): Promise<ResultDto | null> {
     return this.prismaService.result.findUnique({
       where: {
         zipcode,
